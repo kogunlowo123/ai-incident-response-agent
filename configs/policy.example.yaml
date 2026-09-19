@@ -1,0 +1,12 @@
+# Response policy. Protected targets are never proposed for automated action.
+protected_hosts: [dc01]
+protected_users: [breakglass]
+protected_ips: [10.0.0.1]
+# Only these people may approve actions. Leave empty to accept any name (identity is not authenticated).
+approvers: [soc-analyst-1, soc-analyst-2]
+# High-impact actions (critical assets, service and privileged accounts) need one of these.
+senior_approvers: [soc-lead]
+approval_ttl_minutes: 60
+correlation_window_minutes: 240
+max_entity_degree: 25
+singleton_min_severity: medium
