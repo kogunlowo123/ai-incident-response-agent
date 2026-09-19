@@ -408,6 +408,7 @@ class TestInvestigation:
         )
         incident = _incident(alerts)
         assert "credential_compromise" in {h.name for h in incident.investigation.hypotheses}
+        # One source, no critical asset and no privileged user here, so P3 is the expected floor.
         assert incident.priority in {"P1", "P2", "P3"}
 
     def test_privileged_user_raises_score(self, tmp_path: Path) -> None:
