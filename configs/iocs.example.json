@@ -1,0 +1,8 @@
+{
+  "_note": "Documentation-range addresses and a demo hash. Replace with your own threat intelligence.",
+  "indicators": [
+    {"type": "ip", "value": "203.0.113.66", "kind": "c2", "confidence": 90, "source": "demo-intel"},
+    {"type": "domain", "value": "evil-cdn.example", "kind": "phishing", "confidence": 80, "source": "demo-intel"},
+    {"type": "hash", "value": "4b67b37906bb707b9afd241ad25967dd560bd98aceb234143f055bcc8e190795", "kind": "malware", "confidence": 85, "source": "demo-intel"}
+  ]
+}

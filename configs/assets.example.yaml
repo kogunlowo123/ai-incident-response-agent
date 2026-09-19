@@ -1,0 +1,10 @@
+# Asset inventory and identities used to weigh and guard response decisions.
+assets:
+  - {name: ws-042, criticality: medium, owner: alice, service: workstation}
+  - {name: srv-file01, criticality: critical, owner: it-storage, service: file-services}
+  - {name: dc01, criticality: critical, owner: it-identity, service: directory}
+identities:
+  - {name: alice}
+  - {name: bob}
+  - {name: svc-backup, service_account: true, owner: it-storage}
+  - {name: admin.jsmith, privileged: true}
