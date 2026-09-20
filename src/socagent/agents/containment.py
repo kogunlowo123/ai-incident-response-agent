@@ -254,7 +254,7 @@ class ContainmentAgent:
             ),
         )
 
-    # -- construction and guardrails -----------------------------------------------------------------
+    # construction and guardrails
 
     def _build(
         self,

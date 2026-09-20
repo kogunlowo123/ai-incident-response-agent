@@ -87,7 +87,7 @@ class InvestigationAgent:
         self._context = context
         self._policy = policy
 
-    # -- public ------------------------------------------------------------------------------------
+    # public
 
     def investigate(self, alerts: list[Alert]) -> Investigation:
         """Analyse ``alerts`` and return the findings. Input order does not matter."""
@@ -226,7 +226,7 @@ class InvestigationAgent:
         )
         return pool[0] if pool else "unknown"
 
-    # -- context lookups ---------------------------------------------------------------------------
+    # context lookups
 
     def _criticality(self, host: str) -> Criticality | None:
         asset = self._context.assets.get(host)
@@ -250,7 +250,7 @@ class InvestigationAgent:
                     )
         return sorted(matches.values(), key=lambda m: (-m.confidence, m.entity))
 
-    # -- analysis ----------------------------------------------------------------------------------
+    # analysis
 
     @staticmethod
     def _timeline(alerts: list[Alert]) -> list[TimelineEntry]:

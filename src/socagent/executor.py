@@ -93,7 +93,7 @@ class ActionService:
         self._mode = mode
         self._clock = clock or (lambda: datetime.now(timezone.utc))
 
-    # -- recommendations ---------------------------------------------------------------------------
+    # recommendations
 
     def save_recommendations(self, actions: list[Action]) -> int:
         """Store proposals. Existing actions keep their approval state; returns how many are new."""
@@ -125,7 +125,7 @@ class ActionService:
                     )
         return created
 
-    # -- transitions -------------------------------------------------------------------------------
+    # transitions
 
     def _load(self, action_id: str) -> Action:
         action = self._actions.get(action_id)
@@ -249,7 +249,7 @@ class ActionService:
         self._record(done, executor, "action.execute.done", result)
         return done
 
-    # -- helpers -----------------------------------------------------------------------------------
+    # helpers
 
     def _record(self, action: Action, actor: str, event: str, detail: str) -> None:
         with self._db.transaction():

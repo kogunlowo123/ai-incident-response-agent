@@ -77,7 +77,7 @@ class IRService:
     def __exit__(self, *exc_info: object) -> None:
         self.close()
 
-    # -- ingestion ---------------------------------------------------------------------------------
+    # ingestion
 
     def ingest_file(self, source: str, path: Path) -> IngestReport:
         """Normalise and store the alerts in a JSON Lines export from ``source``."""
@@ -90,7 +90,7 @@ class IRService:
         )
         return report
 
-    # -- triage ------------------------------------------------------------------------------------
+    # triage
 
     def triage(self, *, lookback: timedelta, now: datetime | None = None) -> TriageResult:
         """Correlate recent alerts into incidents, investigate each and propose containment."""
@@ -140,7 +140,7 @@ class IRService:
                 closed += 1
         return closed
 
-    # -- queries and updates -----------------------------------------------------------------------
+    # queries and updates
 
     def get_incident(self, prefix: str) -> tuple[Incident, list[Action]]:
         """The incident whose id starts with ``prefix`` and its actions."""

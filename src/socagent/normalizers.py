@@ -36,7 +36,7 @@ class NormalizeError(ValueError):
     """Raised when a record cannot be mapped to an alert."""
 
 
-# -- helpers ---------------------------------------------------------------------------------------
+# helpers
 
 
 def dig(record: dict[str, Any], path: str) -> Any:
@@ -222,7 +222,7 @@ def build(
     )
 
 
-# -- vendors -----------------------------------------------------------------------------------------
+# vendors
 
 
 def splunk(record: dict[str, Any]) -> Alert:
