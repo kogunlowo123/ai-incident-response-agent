@@ -7,7 +7,7 @@ All notable changes to this project are recorded here. The format follows
 
 ### Changed
 
-- `build` and `twine` moved from `requirements.txt` to the `dev` extra and `requirements-dev.txt`.
+- The `dev` extra lists `build` and `twine`, matching `requirements-dev.txt`.
 - The Docker image has a `HEALTHCHECK` that reads one audit entry.
 
 ## [0.1.0]

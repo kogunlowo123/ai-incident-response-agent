@@ -7,5 +7,3 @@ ruff>=0.5
 types-PyYAML>=6.0
 build>=1.6.1
 twine>=7.0.0
-build>=1.6.1
-twine>=7.0.0
