@@ -1,5 +1,9 @@
 # AI Incident Response Agent
 
+![Banner](docs/banner.png)
+
+> If this project is useful, a star helps other engineers find it.
+
 A multi-agent incident response pipeline for a security operations team. It reads alert exports from
 several SIEM and EDR products, normalizes them into one schema, correlates related alerts into
 incidents, investigates each incident, and proposes containment actions. Nothing is executed until a
