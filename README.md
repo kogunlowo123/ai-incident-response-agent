@@ -2,6 +2,8 @@
 
 ![Banner](docs/banner.png)
 
+**Built by [Citadel Cloud Management](https://www.linkedin.com/company/citadel-cloud-management/)** — follow on LinkedIn for more engineering work like this.
+
 A multi-agent incident response pipeline for a security operations team. It reads alert exports from
 several SIEM and EDR products, normalizes them into one schema, correlates related alerts into
 incidents, investigates each incident, and proposes containment actions. Nothing is executed until a
