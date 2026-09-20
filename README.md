@@ -2,8 +2,6 @@
 
 ![Banner](docs/banner.png)
 
-> If this project is useful, a star helps other engineers find it.
-
 A multi-agent incident response pipeline for a security operations team. It reads alert exports from
 several SIEM and EDR products, normalizes them into one schema, correlates related alerts into
 incidents, investigates each incident, and proposes containment actions. Nothing is executed until a
@@ -51,6 +49,10 @@ stateDiagram-v2
     approved --> failed: connector error
     approved --> manual_only: target became protected
 ```
+
+## Requirements
+
+Python 3.10 or newer (tested on 3.10 to 3.13). Runtime dependencies are httpx, pydantic, pydantic-settings, PyYAML and tenacity. Every setting is optional and has a safe default: dry-run execution, no model provider, SQLite at `.socagent/socagent.db`. Ingestion is capped at `SOCAGENT_MAX_LINE_BYTES` per line and `SOCAGENT_MAX_LINES` per file.
 
 ## Quick start
 

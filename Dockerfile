@@ -17,5 +17,6 @@ RUN pip install /tmp/*.whl && rm /tmp/*.whl
 USER socagent
 WORKDIR /home/socagent
 VOLUME ["/data"]
+HEALTHCHECK --interval=60s --timeout=10s --retries=3 CMD ["socagent", "audit", "--limit", "1"]
 ENTRYPOINT ["socagent"]
 CMD ["audit", "--verify"]
