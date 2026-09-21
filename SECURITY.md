@@ -42,7 +42,7 @@ You can expect an acknowledgement within 3 business days and a triage decision w
 | SQL injection | Bound parameters for every statement | `db.py` |
 | Report markup injection | Markdown cells escaped, HTML escaped | `reporting.py` |
 | Webhook URL exposure | Held as `SecretStr`, never printed, logged or stored | `config.py`, `executor.py` |
-| Vulnerable dependencies | `pip-audit`, Dependabot, CodeQL | `.github/` |
+| Vulnerable dependencies | `pip-audit`, CodeQL | `.github/` |
 
 ## Known limits
 
